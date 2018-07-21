@@ -17,6 +17,12 @@
     <header id="header">
         <div id="image"><a href="#"><img id="header-img" src="css/images/chef-logo.jpeg" alt="logo"></a></div>
         <nav id="nav-bar">
+            <div id="button">
+                <button id="toggle" aria-expanded="false" aria-controls="menu-list">
+                    <span id="spanOpen" class="open">☰</span>
+                    <span id="spanClose" class="close">×</span> Menu
+                </button>
+            </div>
             <ul role="navigation">
                 <li class="nav-link li1"><a href="#aboutSection">About</a></li>
                 <li class="nav-link li2"><a href="#videoInfoSection">More</a></li>
@@ -199,6 +205,15 @@
         </section>
     </main>
     <footer><span>OksiBest!</span> &nbsp;&nbsp;2018</footer>
+    <script>
+    const $buttonToggle = document.querySelector("#toggle");
+    $buttonToggle.addEventListener("click", function() {
+        document.querySelector("ul").classList.toggle("openMenu");
+        document.querySelector("button span#spanOpen").classList.toggle("close");
+        document.querySelector("button span#spanClose").classList.toggle("close");
+    })
+    </script>
+    }
 </body>
 
 </html>

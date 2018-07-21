@@ -30,15 +30,14 @@
 
     header {
         display: flex;
-        align-items: center;
-        // background: transparent;
+        align-items: center; // background: transparent;
         background: $menuColor; // position: fixed;
         // top: 0;
         // left: 0;
         // right: 0;
-        div {
+        div#image {
             // display: inline-block;
-            img#image {
+            img {
                 display: block;
                 width: 100px;
                 height: 70px;
@@ -46,9 +45,44 @@
         }
         nav {
             flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            .openMenu {
+                display: flex;
+            }
+            .open {
+                display: inline-block;
+            }
+            .close{
+                display: none;
+            }
+
+            div#button {
+                width: 50%;
+                margin: 10px auto;
+            }
+            button,
+            span {
+                color: white;
+            }
+            button {
+                width: 100%;
+                height: 40px;
+                background: #B87333;
+                border-radius: 5px;
+                border: 2px solid transparent;
+                box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+                font-size: 0.7em;
+                outline: none;
+            }
+            button:hover {
+                box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+            }
             ul {
                 list-style: none;
-                display: flex;
+                // display: flex;
+                display: none;
                 flex-wrap: wrap;
                 align-items: center; // justify-content: space-around;
                 li {
@@ -214,13 +248,12 @@
 
                 div.image {
                     height: auto;
-                    margin-bottom: auto;
-                    // height: 190px;
+                    margin-bottom: auto; // height: 190px;
                     img {
-                    display: block; // height: 100%;
-                    width: 55%;
-                    margin: 0 auto;
-                }
+                        display: block; // height: 100%;
+                        width: 55%;
+                        margin: 0 auto;
+                    }
                 }
 
                 p:first-child {
@@ -261,7 +294,7 @@
             background: rgba($sectionsBackground, 0.9);
             text-align: center;
             font-style: italic;
-            p{
+            p {
                 width: 75%;
                 margin: 0 auto;
             }
@@ -276,22 +309,27 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        span{
-             font-family: 'Kaushan Script', cursive;
+        span {
+            font-family: 'Kaushan Script', cursive;
         }
     }
 
     @media only screen and (min-width: 550px) {
         header {
 
-            div {
+            div#image {
                 img {
                     width: 100px;
                     height: 50px;
                 }
             }
             nav {
+
+                div#button {
+                    display: none;
+                }
                 ul {
+                    display: flex;
                     flex-wrap: nowrap;
                     justify-content: space-around;
 
@@ -349,8 +387,6 @@
                     height: 350px;
                 }
             }
-
-
         }
     }
 
@@ -374,7 +410,7 @@
                 }
             }
 
-            section#contact{
+            section#contact {
                 width: 75%;
             }
         }

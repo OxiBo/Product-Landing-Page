@@ -21,15 +21,40 @@ header {
   display: flex;
   align-items: center;
   background: #FEE8D6; }
-  header div img#image {
+  header div#image img {
     display: block;
     width: 100px;
     height: 70px; }
   header nav {
-    flex: 1; }
+    flex: 1;
+    display: flex;
+    flex-direction: column; }
+    header nav .openMenu {
+      display: flex; }
+    header nav .open {
+      display: inline-block; }
+    header nav .close {
+      display: none; }
+    header nav div#button {
+      width: 50%;
+      margin: 10px auto; }
+    header nav button,
+    header nav span {
+      color: white; }
+    header nav button {
+      width: 100%;
+      height: 40px;
+      background: #B87333;
+      border-radius: 5px;
+      border: 2px solid transparent;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+      font-size: 0.7em;
+      outline: none; }
+    header nav button:hover {
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); }
     header nav ul {
       list-style: none;
-      display: flex;
+      display: none;
       flex-wrap: wrap;
       align-items: center; }
       header nav ul li {
@@ -198,10 +223,13 @@ footer {
     font-family: 'Kaushan Script', cursive; }
 
 @media only screen and (min-width: 550px) {
-  header div img {
+  header div#image img {
     width: 100px;
     height: 50px; }
+  header nav div#button {
+    display: none; }
   header nav ul {
+    display: flex;
     flex-wrap: nowrap;
     justify-content: space-around; }
     header nav ul li {
