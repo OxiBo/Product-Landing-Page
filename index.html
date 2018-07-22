@@ -25,11 +25,11 @@
                     <span id="spanClose" class="close">×</span> Menu
                 </button>
             </div>
-            <ul role="navigation">
-                <li class="nav-link li1"><a href="#aboutSection">About</a></li>
-                <li class="nav-link li2"><a href="#videoInfoSection">More</a></li>
-                <li class="nav-link li3"><a href="#pricesSection">Prices</a></li>
-                <li class="nav-link li4"><a href="#contactUsSection">Contact us</a></li>
+            <ul role="navigation" class="">
+                <li class="li1"><a href="#aboutSection" class="nav-link">About</a></li>
+                <li class="li2"><a href="#videoInfoSection" class="nav-link">More</a></li>
+                <li class="li3"><a href="#pricesSection" class="nav-link">Prices</a></li>
+                <li class="li4"><a href="#contactUsSection" class="nav-link">Contact us</a></li>
             </ul>
         </nav>
     </header>
@@ -39,7 +39,7 @@
             <form id="form" action="https://www.freecodecamp.com/email-submit">
                 <label for="email"></label>
                 <input type="email" id="email" placeholder="Enter your email" required>
-                <input type="submit" value="Get started">
+                <input id="submit" type="submit" value="Get started">
             </form>
         </section>
         <h3 id="aboutSection" class="gradientLine">About our product</h3>
@@ -62,14 +62,14 @@
                 <i class="fas fa-pen-fancy"></i>
                 <div class="ftr">
                     <h3>Custom-made</h3>
-                    <p>We change a recipe for you liking making it even better for you.</p>
+                    <p>We change a recipe for your liking making it even better for you.</p>
                 </div>
             </div>
             <div class="features">
                 <i class="fas fa-truck"></i>
                 <div class="ftr">
                     <h3>Fast delivery</h3>
-                    <p>We make sure we deliver your food fresh from the oven just like you would have it if you just made it yourselfWe change a recipe for you liking making it even better for you.</p>
+                    <p>We make sure we deliver your food fresh from the oven just like you would have it if you just made it yourself. We change a recipe for you liking making it even better for you.</p>
                 </div>
             </div>
             <div class="features">
@@ -208,15 +208,14 @@
     </main>
     <footer><span>OksiBest!</span> &nbsp;&nbsp;2018</footer>
     <script>
+        "use strict"
     //toggle menu button
     const $buttonToggle = $("#toggle");
     $buttonToggle.on("click", function() {
-        $("ul").toggle("openMenu");
-        $("button span#spanOpen").toggle("close");
-        $("button span#spanClose").toggle("close");
+        $("ul").toggleClass("openMenu");
+        $("button span#spanOpen").toggle();
+        $("button span#spanClose").toggle();
     });
-
-
 
 
 
