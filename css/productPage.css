@@ -51,6 +51,10 @@ header {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
+    header nav .open {
+      display: flex; }
+    header nav .close {
+      display: none; }
     header nav div#button {
       width: 50%;
       margin: 10px auto; }
