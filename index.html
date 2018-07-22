@@ -209,11 +209,11 @@
     <footer><span>OksiBest!</span> &nbsp;&nbsp;2018</footer>
     <script>
     //toggle menu button
-    const $buttonToggle = document.querySelector("#toggle");
-    $buttonToggle.addEventListener("click", function() {
-        document.querySelector("ul").classList.toggle("openMenu");
-        document.querySelector("button span#spanOpen").classList.toggle("close");
-        document.querySelector("button span#spanClose").classList.toggle("close");
+    const $buttonToggle = $("#toggle");
+    $buttonToggle.on("click", function() {
+        $("ul").toggle("openMenu");
+        $("button span#spanOpen").toggle("close");
+        $("button span#spanClose").toggle("close");
     });
 
 
